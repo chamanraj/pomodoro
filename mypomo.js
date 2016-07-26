@@ -1,7 +1,6 @@
 $( document ).ready (function() {
-  var str = $('.text-set').text();
-  var str1 = str.slice(7);
-  console.log(parseInt(str1));
+
+  //console.log(parseInt(str1));
 
   $('.fa-chevron-up').click(function() {
 
@@ -14,9 +13,29 @@ $( document ).ready (function() {
 
   });
 
-  $('button').click(function() {
+  $('button').delegate('', 'click', function() {
+    //console.log($('button').text());
+    if ($('button').text() === 'Start') {
+        $('.circle').addClass("backy");
+        var str = $('.text-set').text();
+        var str1 = parseInt(str.slice(7));
+        $('button').html('Stop');
+        var circleText = $('.centering span');  // .html('Work' + '25')
+        var timer = setInterval(function() {circleText.html('Work ' + str1--)}, 1000);
 
-      });
+        //console.log($('button').text());
+
+    } else {
+        $('.circle').removeClass("backy");
+        $('button').html('Start');
+        clearInterval(timer);
+        $('.centering span').html('Session 25');
+
+    }
+
+
+
+  });
 
 
 });

@@ -27,6 +27,10 @@ h1 {
 
 }
 
+.centering {
+  margin-top: 100px;
+}
+
 .text-set {
   display: block;
   font-family: 'Roboto Condensed', sans-serif;
@@ -51,10 +55,6 @@ h1 {
   letter-spacing: 1.5px;
 
 
-}
-
-.centering {
-  margin-top: 100px;
 }
 
 button {
@@ -88,4 +88,10 @@ p {
 
 .fa-chevron-down, .fa-chevron-up {
   cursor: pointer;
+}
+
+.backy {
+  background-color: #4CB648;
+
+
 }
