@@ -3,13 +3,20 @@ $( document ).ready (function() {
   //console.log(parseInt(str1));
 
   $('.fa-chevron-up').click(function() {
-
-    console.log('Hurray');
+    var num = parseInt($('#five').text());
+    num++;
+    $('#five').html(num);
 
   });
   $('.fa-chevron-down').click(function() {
 
-    console.log('Hurray');
+    var num = parseInt($('#five').text());
+    if (num > 1) {
+        num--;
+    }
+
+    $('#five').html(num);
+
 
   });
 
